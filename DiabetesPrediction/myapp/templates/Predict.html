@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+    <style>
+          .container {
+            position: fixed; 
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centers the container */
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 2%; /* Adjusted padding for better spacing */
+            box-shadow: 0 0 20px #042A4F; /* More prominent shadow */
+            width: 80%; /* Set a max-width for larger screens */
+            max-width: 600px; /* Max width of the container */
+        }
+        
+        .form-row {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left; /* Align the labels to the left */
+        }
+
+        label {
+            display: block; /* Ensure the label is on a new line */
+            font-weight: bold;
+            margin-bottom: 5px; /* Space between label and input */
+        }
+
+        body {
+            background-image:url("{% static 'Diabetesprediction/images/home.jpg'%}");
+        background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #042A4F;
+            text-align: center;
+            margin: 0; /* Remove default margin */
+        }
+
+        .form-control {
+            width: 95%; /* Adjust width to fit inside the container */
+            padding: 10px;
+            border: 1px solid #042A4F;
+            border-radius: 4px;
+            transition: border 0.3s; /* Smooth transition for border */
+        }
+
+        .form-control:hover {
+            border: 2px solid #ABC2C8; /* Highlight border on hover */
+        }
+
+        .btn-primary {
+            background-color: #042A4F;
+            color: #fff;
+            padding: 10px 20px; /* Adjust padding */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Smooth transition for background */
+        }
+
+        .btn-primary:hover {
+            background-color: #ABC2C8; /* Lighten color on hover */
+        }
+        h1{
+    color: #042A4F;
+    font-size: 20px;
+
+}
+h4{
+    color: #ABC2C8;
+    font-size: 12px;
+    text-align: left;
+
+ }
+    </style>
+</head>
+<body>
+
+   <div class="container">
+    <h1>
+        Diabetes Prediction App
+    </h1>
+       <h4>Enter your details below to get started</h4>
+      <form action="result">
+            <div class="form-group col-sm-6">
+                <label for="Pregnancies">Enter Pregnancies :</label>
+                <input type="number" class="form-control" id="Pregnancies" name="n1" required>
+            </div>
+
+            <div class="form-group col-sm-6">
+                <label for="Glucose">Enter Glucose :</label>
+                <input type="decimal" class="form-control" id="Glucose" name="n2" required>
+            </div>
+
+            <div class="form-group col-sm-6">
+                <label for="BloodPressure">Enter Blood Pressure :</label>
+                <input type="decimal" class="form-control" id="Blood Pressure" name="n3" required>
+            </div>
+
+            <div class="form-group col-sm-6">
+                <label for="Skinthinkness">Enter Skin thinkness :</label>
+                <input type="decimal" class="form-control" id="Skinthinkness" name="n4" required>
+            </div>
+
+            <div class="form-group col-sm-6">
+                <label for="Insulin">Enter Insulin :</label>
+                <input type="decimal" class="form-control" id="Insulin" name="n5" required>
+            </div>
+
+            <div class="form-group col-sm-6">
+                <label for="BMI">Enter BMI :</label>
+                <input type="decimal" class="form-control" id="BMI " name="n6" required>
+            </div>
+
+            <div class="form-group col-sm-6">
+                <label for="DiabetesPedigreeFunction">Enter Diabetes Pedigree Function :</label>
+                <input type="decimal" class="form-control" id="DiabetesPedigreeFunction" name="n7" required>
+            </div>
+
+            <div class="form-group col-sm-6">
+                <label for="Age">Enter Age :</label>
+                <input type="number" class="form-control" id="Age" name="n8" min="21" required>
+            </div>
+
+            <div class="col-sm-12 text-center">
+                <button type="submit" class="btn btn-primary">Predict</button>
+            </div>
+    </form>
+    Result:{{result2}}
+</div>
+</body>
+</html>
