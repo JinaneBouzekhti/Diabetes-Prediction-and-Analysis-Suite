@@ -1,7 +1,7 @@
 # Diabetes Management Suite
 
 ## Overview
-Welcome to the Diabetes Management Suite, a comprehensive toolkit for diabetes prediction and data analysis. This suite consists of two main components: a "Diabetes Prediction App" built with Django, and a Jupyter Notebook for in-depth analysis and visualization of diabetes data.
+Welcome to the Diabetes Management Suite, a comprehensive toolkit for diabetes prediction and data analysis. This suite consists of two main components: a Jupyter Notebook for in-depth analysis and visualization of diabetes data, and a "Diabetes Prediction App" built with Django.
 
 ### About the Dataset
 - **Source:** National Institute of Diabetes and Digestive and Kidney Diseases
